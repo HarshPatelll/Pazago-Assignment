@@ -1,12 +1,75 @@
-# React + Vite
+# Weather Agent Chat Interface
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A modern, responsive chat interface for interacting with a weather AI agent. Built with React, TypeScript, and Tailwind CSS.
 
-Currently, two official plugins are available:
+## ✨ Features
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- **ChatGPT-style Interface**: Modern chat bubbles and sidebar
+- **Real-time Streaming**: Live responses from weather agent
+- **Chat History**: Persistent conversation sessions
+- **Mobile Responsive**: Works on all devices
+- **Weather Intelligence**: Get weather information for any location
 
-## Expanding the ESLint configuration
+## 🚀 Quick Start
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+### Prerequisites
+- Node.js 16+ 
+- npm or yarn
+
+### Installation
+
+1. Clone the repository:
+```bash
+git clone https://github.com/YOUR_USERNAME/weather-agent-chat.git
+cd weather-agent-chat
+```
+
+2. Install dependencies:
+```bash
+npm install
+```
+
+3. Update your college roll number in `src/components/ChatInterface.tsx`:
+```typescript
+threadId: 'YOUR_COLLEGE_ROLL_NUMBER',
+```
+
+4. Start the development server:
+```bash
+npm run dev
+```
+
+5. Open [http://localhost:5173](http://localhost:5173) in your browser
+
+## 🛠️ Built With
+
+- **React 18** - UI library
+- **TypeScript** - Type safety
+- **Tailwind CSS** - Styling
+- **Vite** - Build tool
+- **Lucide React** - Icons
+
+## 📱 Usage
+
+1. **Ask Weather Questions**: Type any weather-related query
+2. **Multiple Chats**: Create new conversations with the "New Chat" button
+3. **Mobile Support**: Use the hamburger menu on mobile devices
+4. **Chat History**: Access previous conversations from the sidebar
+
+## 🌤️ Example Queries
+
+- "What's the weather in London?"
+- "Will it rain tomorrow in New York?"
+- "Temperature in Tokyo right now"
+- "Weather forecast for Paris this week"
+
+## 🔧 Configuration
+
+The app connects to a Mastra Cloud weather agent. Update the API endpoint in `ChatInterface.tsx` if needed:
+
+```typescript
+const response = await fetch('https://millions-screeching-vultur.mastra.cloud/api/agents/weatherAgent/stream', {
+  // ... configuration
+});
+```
+
